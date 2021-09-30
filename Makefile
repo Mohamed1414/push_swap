@@ -1,5 +1,5 @@
 NAME = push_swap
-SRCS = push_swap.c
+SRCS = push_swap.c ft_atoi.c ft_isspace.c 
 OBJ =  $(SRCS:.c=.o)
 
 CC = gcc

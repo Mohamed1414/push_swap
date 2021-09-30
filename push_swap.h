@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbahstou <mbahstou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/30 15:48:48 by mbahstou          #+#    #+#             */
-/*   Updated: 2021/09/30 17:31:54 by mbahstou         ###   ########.fr       */
+/*   Created: 2021/09/30 15:43:31 by mbahstou          #+#    #+#             */
+/*   Updated: 2021/09/30 16:32:08 by mbahstou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
-int	main(int argc, char *argv[])
-{
-	int stackA[argc];
-	int i;
-	if(argc < 2)
-		return 0;
-	//stackA = malloc(sizeof(int) * argc);
-	i = 1;
-	while (i < argc)
-	{
-		stackA[i - 1] = ft_atoi(argv[i]);
-		i++;
-	}
-	stackA[i - 1] = '\0';
-	i = 0;
-	while (stackA[i])
-	{
-		printf("%d <- numero asignado %d <- en posicion\n",stackA[i],i);
-		i++;
-	}
-	return (0);
-}
+int		ft_atoi(const char *str);
+int		ft_isspace(int c);
+#endif
